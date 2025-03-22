@@ -24,7 +24,7 @@ func main() {
 	}
 
 	score := 0
-	num_questions := 10
+	num_questions := 11
 
 	fmt.Printf("What Italian car company is associated closely with the color red? ")
 	var answer string
@@ -48,7 +48,7 @@ func main() {
 		fmt.Println("Wrong!")
 	}
 
-	fmt.Printf("How many wheels does a sadan car have? ")
+	fmt.Printf("How many wheels does a coupe car have? ")
 	var q3answer int
 	fmt.Scan(&q3answer)
 
@@ -131,6 +131,23 @@ func main() {
 
 	if q10answer == "B" || q10answer == "b" {
 		fmt.Println("Correct!")
+		score += 1
+	} else {
+		fmt.Println("Wrong!")
+	}
+
+	fmt.Printf("Fill in the Blanks, 'The Nissan skyline R__ is also known as the ________'.\n")
+	var q11answer string
+	var q12answer string
+	fmt.Scan(&q11answer)
+	fmt.Scan(&q12answer)
+
+	if (q11answer == "32" && q12answer == "Godzilla") || (q11answer == "32" && q12answer == "godzilla") {
+		fmt.Println("Correct!")
+		fmt.Printf("The Nissan skyline R32 is also known as the Godzilla.")
+		score += 2
+	} else if q11answer == "32" || q12answer == "Godzilla" || q12answer == "godzilla" {
+		fmt.Println("Partially Correct!")
 		score += 1
 	} else {
 		fmt.Println("Wrong!")
